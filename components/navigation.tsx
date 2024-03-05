@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 // ** global navigation bar
 const Navigation = () => {
+  // current url path getter hook
   const path = usePathname();
 
   return (
