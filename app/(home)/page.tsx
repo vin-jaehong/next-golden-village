@@ -2,6 +2,7 @@ export const metadata = {
   title: "home",
 };
 
+// 노마드 코더쪽에서 제공해주는 API Path
 const URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 const getMovies = async () => {
