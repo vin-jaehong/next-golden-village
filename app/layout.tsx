@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Navigation from "../components/navigation";
 
+// ** 메타데이터 (템플릿 지정)
 export const metadata: Metadata = {
   title: {
     template: "%s | Next Movies",
