@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "The best movies on the best framework",
 };
 
-// 레이아웃 컴포넌트 (children 이 페이지)
+// ** 레이아웃 컴포넌트 (children 이 페이지)
 export default function RootLayout({
   children,
 }: {
