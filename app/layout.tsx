@@ -20,7 +20,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navigation />
-        // ** 이 부분에 페이지 컴포넌트가 들어감
         {children}
       </body>
     </html>
