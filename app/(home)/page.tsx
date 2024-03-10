@@ -10,6 +10,7 @@ const getMovies = async () => {
   await new Promise((resolve) => setTimeout(resolve, 5000));
 
   const response = await fetch(URL);
+  // response 받은 데이터의 json 데이터를 호출하려면 다시 await 을 사용해야함.
   const json = await response.json();
   return json;
 };
