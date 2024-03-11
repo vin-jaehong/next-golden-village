@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { API_URL } from "../../../(home)/page";
 
+// 현재 페이지의 메타 데이터
 export const metadata: Metadata = {
   title: "movie",
 };
