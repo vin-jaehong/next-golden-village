@@ -3,7 +3,7 @@ import MovieInfo from "../../../../components/movie-info";
 import { Suspense } from "react";
 
 // 영화 정보 페이지 컴포넌트
-const MovieDetail = async ({ params: { id } }: { params: { id: string } }) => {
+const MovieDetail = ({ params: { id } }: { params: { id: string } }) => {
   return (
     <div>
       <h3>Movie detail page</h3>
