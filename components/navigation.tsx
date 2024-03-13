@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import styles from "../styles/navigation.module.css";
 
 // ** global navigation bar
 const Navigation = () => {
@@ -9,8 +10,8 @@ const Navigation = () => {
   const path = usePathname();
 
   return (
-    <nav>
-      <ul>
+    <nav className={styles.nav}>
+      <ul className={styles.list}>
         <li>
           <Link href="/">Home</Link> {path === "/" && "🔥"}
         </li>
