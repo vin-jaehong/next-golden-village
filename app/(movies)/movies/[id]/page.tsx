@@ -3,6 +3,7 @@ import MovieInfo from "../../../../components/movie-info";
 import { Suspense } from "react";
 
 // 영화 정보 페이지 컴포넌트
+// suspense 를 이용하여 부분 서버 사이드 랜더링 처리
 const MovieDetail = ({ params: { id } }: { params: { id: string } }) => {
   return (
     <div>
