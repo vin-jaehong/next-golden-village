@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Navigation from "../components/navigation";
+import "../styles/global.css";
 
 // ** 메타데이터 (템플릿 지정)
 export const metadata: Metadata = {
