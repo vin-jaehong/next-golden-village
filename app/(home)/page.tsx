@@ -1,4 +1,5 @@
-import Link from "next/link";
+import Movie from "../../components/movie";
+import styles from "../../styles/home.module.css";
 
 export const metadata = {
   title: "home",
@@ -9,8 +10,6 @@ export const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 // api request function
 const getMovies = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-
   const response = await fetch(API_URL);
   // response 받은 데이터의 json 데이터를 호출하려면 다시 await 을 사용해야함.
   const json = await response.json();
@@ -21,11 +20,14 @@ const getMovies = async () => {
 const HomePage = async () => {
   const movies = await getMovies();
   return (
-    <div>
+    <div className={styles.container}>
       {movies.map((movie) => (
-        <li key={`movies-item-${movie.id}`}>
-          <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
-        </li>
+        <Movie
+          key={movie.id}
+          id={movie.id}
+          poster_path={movie.poster_path}
+          title={movie.title}
+        />
       ))}
     </div>
   );

@@ -2,8 +2,6 @@ import { API_URL } from "../app/(home)/page";
 
 // 영화 정보 api request method
 const getMovie = async (id: string) => {
-  // await new Promise((resolve) => setTimeout(resolve, 2000));
-
   const response = await fetch(`${API_URL}/${id}`);
   return response.json();
 };
