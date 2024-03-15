@@ -1,12 +1,10 @@
 import Movie from "../../components/movie";
+import { API_URL } from "../../constants";
 import styles from "../../styles/home.module.css";
 
 export const metadata = {
   title: "home",
 };
-
-// 노마드 코더쪽에서 제공해주는 api path
-export const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 // api request function
 const getMovies = async () => {

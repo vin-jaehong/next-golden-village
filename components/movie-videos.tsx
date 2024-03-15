@@ -1,4 +1,4 @@
-import { API_URL } from "../app/(home)/page";
+import { API_URL } from "../constants";
 import styles from "../styles/movie-video.module.css";
 
 // 영화 예고편 api request method
