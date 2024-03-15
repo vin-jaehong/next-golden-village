@@ -2,7 +2,7 @@ import { API_URL } from "../app/(home)/page";
 import styles from "../styles/movie-info.module.css";
 
 // 영화 정보 api request method
-const getMovie = async (id: string) => {
+export const getMovie = async (id: string) => {
   const response = await fetch(`${API_URL}/${id}`);
   return response.json();
 };

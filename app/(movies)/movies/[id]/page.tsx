@@ -1,10 +1,22 @@
 import MovieVideos from "../../../../components/movie-videos";
-import MovieInfo from "../../../../components/movie-info";
+import MovieInfo, { getMovie } from "../../../../components/movie-info";
 import { Suspense } from "react";
 
-// 영화 정보 페이지 컴포넌트
-// suspense 를 이용하여 각 컴포넌트 서버 사이드 랜더링 처리
-const MovieDetail = ({ params: { id } }: { params: { id: string } }) => {
+interface IParams {
+  params: {
+    id: string;
+  };
+}
+
+export const generateMetadata = async ({ params: { id } }: IParams) => {
+  const movie = await getMovie(id);
+
+  return {
+    title: movie.title,
+  };
+};
+
+const MovieDetail = ({ params: { id } }: IParams) => {
   return (
     <div>
       <Suspense fallback={<h1>Loading movie info</h1>}>
