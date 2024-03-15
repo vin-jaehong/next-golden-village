@@ -7,6 +7,7 @@ const getVideos = async (id: string) => {
   return response.json();
 };
 
+// 영화 예고편 목록 컴포넌트
 const MovieVideos = async ({ id }: { id: string }) => {
   const videos = await getVideos(id);
   return (
