@@ -1,3 +1,4 @@
+// meta data
 export const metadata = {
   title: "About us",
 };
