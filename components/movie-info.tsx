@@ -7,6 +7,7 @@ export const getMovie = async (id: string) => {
   return response.json();
 };
 
+// 영화 정보 컴포넌트
 const MovieInfo = async ({ id }: { id: string }) => {
   const movie = await getMovie(id);
 
