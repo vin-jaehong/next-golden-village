@@ -9,6 +9,7 @@ export const getMovie = async (id: string) => {
 
 // 영화 정보 컴포넌트
 const MovieInfo = async ({ id }: { id: string }) => {
+  // request
   const movie = await getMovie(id);
 
   return (
