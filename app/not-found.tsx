@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 
+// meta data
 export const metadata: Metadata = {
   title: "Not found Page!",
 };
