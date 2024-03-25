@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     default: "Loading...",
   },
   description: "The best movies on the best framework",
+  icons: {
+    icon: "/images/common/logo.png",
+  },
 };
 
 // ** 레이아웃 컴포넌트 (children 이 페이지)
