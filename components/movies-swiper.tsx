@@ -23,6 +23,7 @@ const MoviesSwiper = ({ movies }) => {
         loop={true} // 슬라이드 루프
         spaceBetween={50} // 슬라이스 사이 간격
         slidesPerView={1} // 보여질 슬라이스 수
+        speed={1000}
         navigation={{
           prevEl: navigationPrevRef.current,
           nextEl: navigationNextRef.current,
