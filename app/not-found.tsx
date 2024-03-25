@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-// meta data
+// 메타데이터 설정
 export const metadata: Metadata = {
   title: "Not found Page!",
 };
