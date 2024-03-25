@@ -4,10 +4,7 @@ import "../styles/global.css";
 
 // ** 메타데이터 (템플릿 지정)
 export const metadata: Metadata = {
-  title: {
-    template: "%s | Next Golden Village",
-    default: "Loading...",
-  },
+  title: "Next Golden Village",
   description: "The best movies on the best framework",
   icons: {
     icon: "/images/common/favicon.png",
