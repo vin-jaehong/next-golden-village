@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import styles from "../styles/navigation.module.css";
+import styles from "../styles/navigation.module.scss";
 
 // ** global navigation bar
 const Navigation = () => {
@@ -11,14 +11,10 @@ const Navigation = () => {
 
   return (
     <nav className={styles.nav}>
-      <ul className={styles.list}>
-        <li>
-          <Link href="/">Home</Link> {path === "/" && "🔥"}
-        </li>
-        <li>
-          <Link href="/about-us">About Us</Link> {path === "/about-us" && "🔥"}
-        </li>
-      </ul>
+      <Link href="/">
+        <img src="/images/common/logo.png" alt="logo"></img>
+        <p>NGV</p>
+      </Link>
     </nav>
   );
 };

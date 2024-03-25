@@ -5,12 +5,12 @@ import "../styles/global.css";
 // ** 메타데이터 (템플릿 지정)
 export const metadata: Metadata = {
   title: {
-    template: "%s | Next Movies",
+    template: "%s | Next Golden Village",
     default: "Loading...",
   },
   description: "The best movies on the best framework",
   icons: {
-    icon: "/images/common/logo.png",
+    icon: "/images/common/favicon.png",
   },
 };
 
