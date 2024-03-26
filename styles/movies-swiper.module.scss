@@ -1,7 +1,14 @@
 .container {
   position: relative;
   width: 400px;
+  height: 600px;
   margin: 0 auto;
+}
+
+.swiper {
+  height: 600px;
+  border: 1px solid rgb(77, 77, 80);
+  border-radius: 10px;
 }
 
 .prev {
