@@ -25,8 +25,14 @@ const MoviesSwiper = ({ movies }) => {
         slidesPerView={1} // 보여질 슬라이스 수
         speed={1000}
         navigation={{
-          prevEl: navigationPrevRef.current,
-          nextEl: navigationNextRef.current,
+          prevEl: navigationPrevRef.current!,
+          nextEl: navigationNextRef.current!,
+        }}
+        onInit={(swiper) => {
+          swiper.params.navigation["prevEl"] = navigationPrevRef.current;
+          swiper.params.navigation["nextEl"] = navigationNextRef.current;
+          swiper.navigation.init();
+          swiper.navigation.update();
         }}
         autoplay={{
           delay: 1500,
