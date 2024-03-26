@@ -30,7 +30,7 @@ const MoviesSwiper = ({ movies }) => {
         }}
         autoplay={{
           delay: 1500,
-          disableOnInteraction: false, // 사용자 상호작용시 슬라이더 일시 정지 비활성
+          disableOnInteraction: false,
         }}
       >
         {movies.map((movie) => (
