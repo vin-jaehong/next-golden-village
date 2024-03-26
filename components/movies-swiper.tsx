@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 import { useRef } from "react";
 
 const MoviesSwiper = ({ movies }) => {
+  // TODO 배포 환경에서 작동이 안되는데 체크 필요
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
 
