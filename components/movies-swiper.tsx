@@ -57,12 +57,12 @@ const MoviesSwiper = ({ movies }) => {
       <img
         className={styles.prev}
         ref={navigationPrevRef}
-        src="/images/icon/arrow/right-chevron.png"
+        src="/images/icon/arrow/left-circle.png"
       />
       <img
         className={styles.next}
         ref={navigationNextRef}
-        src="/images/icon/arrow/right-chevron.png"
+        src="/images/icon/arrow/left-circle.png"
       />
     </div>
   );
