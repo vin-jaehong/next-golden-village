@@ -22,9 +22,9 @@ const MoviesSwiper = ({ movies }) => {
     <div className={styles.container}>
       <Swiper
         className={styles.swiper}
-        loop={true} // 슬라이드 루프
-        spaceBetween={0} // 슬라이스 사이 간격
-        slidesPerView={1} // 보여질 슬라이스 수
+        loop={true}
+        spaceBetween={0}
+        slidesPerView={1}
         speed={1000}
         navigation={{
           prevEl: navigationPrevRef.current!,
