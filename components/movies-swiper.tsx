@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 import { useRef } from "react";
 
 const MoviesSwiper = ({ movies }) => {
-  // 배포 환경에서 작동이 안되는데 체크 필요
+  // TODO 배포 환경에서 작동이 안되는데 체크 필요
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
 
@@ -31,6 +31,8 @@ const MoviesSwiper = ({ movies }) => {
           nextEl: navigationNextRef.current!,
         }}
         onInit={(swiper) => {
+          console.log(navigationNextRef.current);
+          console.log(navigationPrevRef.current);
           swiper.params.navigation["prevEl"] = navigationPrevRef.current;
           swiper.params.navigation["nextEl"] = navigationNextRef.current;
           swiper.navigation.init();
