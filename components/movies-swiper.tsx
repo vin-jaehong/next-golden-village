@@ -12,32 +12,26 @@ import "swiper/css/pagination";
 import { useRef } from "react";
 
 const MoviesSwiper = ({ movies }) => {
-  // TODO 문제 해결 필요 (swiper 초기화 되는 타이밍에 버튼이 다 랜더링이 되지 않았는지, null 이 사용됨.)
-  const navigationPrevRef = useRef(null);
-  const navigationNextRef = useRef(null);
+  const swiperRef = useRef(null);
+
+  const swiperSlidePrev = () => {
+    swiperRef.current.swiper.slidePrev();
+  };
+  const swiperSlideNext = () => {
+    swiperRef.current.swiper.slideNext();
+  };
 
   SwiperCore.use([Navigation, Scrollbar, Autoplay]);
 
   return (
     <div className={styles.container}>
       <Swiper
+        ref={swiperRef}
         className={styles.swiper}
         loop={true}
         spaceBetween={0}
         slidesPerView={1}
         speed={1000}
-        navigation={{
-          prevEl: navigationPrevRef.current!,
-          nextEl: navigationNextRef.current!,
-        }}
-        onInit={(swiper) => {
-          console.log(navigationNextRef.current);
-          console.log(navigationPrevRef.current);
-          swiper.params.navigation["prevEl"] = navigationPrevRef.current;
-          swiper.params.navigation["nextEl"] = navigationNextRef.current;
-          swiper.navigation.init();
-          swiper.navigation.update();
-        }}
         autoplay={{
           delay: 1500,
           disableOnInteraction: false,
@@ -56,12 +50,12 @@ const MoviesSwiper = ({ movies }) => {
       </Swiper>
       <img
         className={styles.prev}
-        ref={navigationPrevRef}
+        onClick={swiperSlidePrev}
         src="/images/icon/arrow/left-circle.png"
       />
       <img
         className={styles.next}
-        ref={navigationNextRef}
+        onClick={swiperSlideNext}
         src="/images/icon/arrow/left-circle.png"
       />
     </div>
