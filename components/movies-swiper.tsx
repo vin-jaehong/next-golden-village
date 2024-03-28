@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 import { useRef } from "react";
 
 const MoviesSwiper = ({ movies }) => {
-  // TODO 배포 환경에서 작동이 안되는데 체크 필요
+  // TODO 문제 해결 필요 (swiper 초기화 되는 타이밍에 버튼이 다 랜더링이 되지 않았는지, null 이 사용됨.)
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
 
@@ -58,12 +58,12 @@ const MoviesSwiper = ({ movies }) => {
         className={styles.prev}
         ref={navigationPrevRef}
         src="/images/icon/arrow/right-chevron.png"
-      ></img>
+      />
       <img
         className={styles.next}
         ref={navigationNextRef}
         src="/images/icon/arrow/right-chevron.png"
-      ></img>
+      />
     </div>
   );
 };
