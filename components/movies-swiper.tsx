@@ -1,6 +1,5 @@
 "use client";
 
-// modules
 import Movie from "./movie";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar, Autoplay } from "swiper/modules";
