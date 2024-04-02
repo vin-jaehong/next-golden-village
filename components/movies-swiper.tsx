@@ -21,6 +21,7 @@ const MoviesSwiper = ({ movies }) => {
     swiperRef.current.swiper.slideNext();
   };
 
+  // Swiper 에서 해당 플러그인을 사용 지정
   SwiperCore.use([Navigation, Scrollbar, Autoplay]);
 
   return (
