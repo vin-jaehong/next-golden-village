@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "../styles/movie.module.scss";
 import { useRouter } from "next/navigation";
 
+// props dataset
 interface IMovieProps {
   title: string;
   id: string;
