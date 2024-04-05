@@ -1,13 +1,11 @@
 import { API_URL } from "../constants";
 import styles from "../styles/movie-video.module.css";
 
-// 영화 예고편 api request method
 const getVideos = async (id: string) => {
   const response = await fetch(`${API_URL}/${id}/videos`);
   return response.json();
 };
 
-// 영화 예고편 목록 컴포넌트
 const MovieVideos = async ({ id }: { id: string }) => {
   const videos = await getVideos(id);
   return (
