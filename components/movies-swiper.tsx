@@ -13,7 +13,7 @@ import { useRef } from "react";
 const MoviesSwiper = ({ movies }) => {
   const swiperRef = useRef(null);
 
-  // !! custom navigation button 이 먹히지 않아 trigger 메소드로 작업
+  // ** custom navigation button 이 먹히지 않아 trigger 메소드로 작업
   const swiperSlidePrev = () => {
     swiperRef.current.swiper.slidePrev();
   };
