@@ -1,11 +1,13 @@
 import { API_URL } from "../constants";
 import styles from "../styles/movie-video.module.css";
 
+// request movie videos information function
 const getVideos = async (id: string) => {
   const response = await fetch(`${API_URL}/${id}/videos`);
   return response.json();
 };
 
+// movie videos component
 const MovieVideos = async ({ id }: { id: string }) => {
   const videos = await getVideos(id);
   return (
