@@ -6,9 +6,7 @@ export const getMovie = async (id: string) => {
   return response.json();
 };
 
-// movie information component
 const MovieInfo = async ({ id }: { id: string }) => {
-  // request
   const movie = await getMovie(id);
 
   return (
