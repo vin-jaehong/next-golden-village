@@ -2,7 +2,6 @@ import styles from "../../styles/home.module.scss";
 import { API_URL } from "../../constants";
 import MoviesSwiper from "../../components/movies-swiper";
 
-// request movie list
 const getMovies = async () => {
   const response = await fetch(API_URL);
   const json = await response.json();
