@@ -1,11 +1,9 @@
 import { Metadata } from "next";
 
-// metadata
 export const metadata: Metadata = {
   title: "Not found Page!",
 };
 
-// not found page component
 const NotFound = () => {
   return (
     <div>
