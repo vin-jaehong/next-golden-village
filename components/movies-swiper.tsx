@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useRef } from "react";
 
+// movie swiper component
 const MoviesSwiper = ({ movies }) => {
   const swiperRef = useRef(null);
 
