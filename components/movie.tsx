@@ -11,6 +11,7 @@ interface IMovieProps {
   poster_path: string;
 }
 
+// movie component
 const Movie = ({ title, id, poster_path }: IMovieProps) => {
   const router = useRouter();
   const onClick = () => {
