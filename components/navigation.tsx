@@ -4,9 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "../styles/navigation.module.scss";
 
-// ** global navigation bar
 const Navigation = () => {
-  // current url path getter hook
   const path = usePathname();
 
   return (

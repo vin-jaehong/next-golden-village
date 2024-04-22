@@ -10,11 +10,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useRef } from "react";
 
-// movie swiper component
 const MoviesSwiper = ({ movies }) => {
   const swiperRef = useRef(null);
 
-  // ** custom navigation button 이 먹히지 않아 trigger 메소드로 작업
   const swiperSlidePrev = () => {
     swiperRef.current.swiper.slidePrev();
   };
@@ -22,7 +20,6 @@ const MoviesSwiper = ({ movies }) => {
     swiperRef.current.swiper.slideNext();
   };
 
-  // Swiper 에서 해당 플러그인을 사용 지정
   SwiperCore.use([Navigation, Scrollbar, Autoplay]);
 
   return (
