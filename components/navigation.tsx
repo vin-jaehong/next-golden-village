@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "../styles/navigation.module.scss";
 
+// navigation component
 const Navigation = () => {
   const path = usePathname();
 
