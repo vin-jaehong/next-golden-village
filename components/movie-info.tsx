@@ -11,6 +11,7 @@ export const getMovie = async (id: string) => {
   return response.json();
 };
 
+// movie info component
 const MovieInfo = async ({ id }: { id: string }) => {
   const movie = await getMovie(id);
 
