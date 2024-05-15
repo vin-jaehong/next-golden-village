@@ -6,6 +6,7 @@ const getVideos = async (id: string) => {
   return response.json();
 };
 
+// movie videos component
 const MovieVideos = async ({ id }: { id: string }) => {
   const videos = await getVideos(id);
   return (
