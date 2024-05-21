@@ -1,11 +1,6 @@
 import { API_URL } from "../constants";
 import styles from "../styles/movie-info.module.css";
 
-/**
- * request movie information method
- * @param id
- * @returns
- */
 export const getMovie = async (id: string) => {
   const response = await fetch(`${API_URL}/${id}`);
   return response.json();
